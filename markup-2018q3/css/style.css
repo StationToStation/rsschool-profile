@@ -3,14 +3,20 @@
   margin: 0 auto;
 }
 
-wrapper {
-}
-
 header {
   background-image: url(../img/headerBG.png);
+  background-position: center top;
   height: 961px;
   width: 100%;
   color: white;
+}
+
+header nav {
+  width: fit-content;
+}
+
+.wrapper {
+  width: 75%;
 }
 
 .upperPanel {
@@ -41,11 +47,92 @@ header {
   height: 765px;
 }
 
+.packages .wrapper {
+  display: flex;
+}
+
 article {
-  width: 20%;
-  display: inline-block;
+  /*width: 20%;
+  display: inline-block;*/
 }
 
 .aboutUs {
   height: 400px;
+  width: 100%;
+}
+
+.aboutUs article {
+  width:43%;
+}
+
+.team {
+  display: inline-block;
+  width:56%;
+}
+
+.team img {
+  border-radius: 50%;
+  border: 5px solid rgb(229, 229, 229);
+  height: 100px;
+}
+figure {
+  display: inline-block;
+}
+
+.comments {
+  height: 190px;
+  background-image: url(../img/commentsBG.png);
+}
+
+.functions {
+  height: 340px;
+}
+
+footer {
+  height: 290px;
+  background-color: rgb(42,42,42);
+  color: rgb(148, 148, 148);
+}
+
+.topMenu {
+  border-bottom: 1px solid rgb(148, 148, 148);
+}
+
+footer img {
+  filter: brightness(0.46);
+}
+
+footer ul {
+  display: inline-block;
+}
+
+footer li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: auto;
+}
+
+.bottom div {
+  flex-basis: 30%;
+  flex-grow: 1;
+}
+
+.bottom i {
+  display:inline-block;
+}
+.fa-phone {
+  transform: scale(-1,1);
+}
+
+.area2 li {
+  display: inline-block;
+}
+
+.area3 p {
+  display: inline-block;
 }
