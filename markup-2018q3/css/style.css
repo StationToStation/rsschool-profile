@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0 auto;
+}
+
+wrapper {
+}
+
+header {
+  background-image: url(../img/headerBG.png);
+  height: 961px;
+  width: 100%;
+  color: white;
+}
+
+.upperPanel {
+  border-bottom: 1px solid white;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.headerText {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.member {
+  height: 120px;
+}
+
+.domain {
+  height: 580px;
+  color: rgb(196, 196, 196);
+}
+
+.domain h1, .domain p {
+  width: fit-content;
+}
+
+.packages {
+  height: 765px;
+}
+
+article {
+  width: 20%;
+  display: inline-block;
+}
+
+.aboutUs {
+  height: 400px;
+}
