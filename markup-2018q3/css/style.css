@@ -22,6 +22,10 @@ header {
   color: white;
 }
 
+header img {
+  margin: 0;
+}
+
 header .gradient {
   background-color: rgba(0,0,0,0.8);
   height: 100%;
@@ -29,13 +33,17 @@ header .gradient {
 
 header nav {
   width: 52.5%;
+  margin: 0;
   display: flex;
   justify-content: space-between;
-  float: right;
+  height: 100%;
 }
 
 header nav a{
   margin: 0;
+  text-decoration: none;
+  height: 100%;
+  line-height: 90px;
 }
 
 header nav a:hover {
@@ -54,9 +62,13 @@ header .wrapper {
 }
 
 .upperPanel {
+  height: 90px;
   border-bottom: 1px solid rgba(255,255,255,0.2);
   width: 75%;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .headerText {
