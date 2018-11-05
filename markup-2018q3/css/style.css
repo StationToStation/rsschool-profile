@@ -1,5 +1,6 @@
 html {
   font-size: 10px;
+  width: 1600px;
 }
 
 * {
@@ -17,7 +18,7 @@ hr {
 header {
   background-image: url(../img/headerBG.png);
   background-position: center top;
-  height: 961px;
+  height: 940px;
   width: 100%;
   color: white;
 }
@@ -51,7 +52,7 @@ header nav a:hover {
 }
 
 .wrapper {
-  width: 75%;
+  width: 1200px;
   height: 100%;
 }
 
@@ -64,7 +65,7 @@ header .wrapper {
 .upperPanel {
   height: 90px;
   border-bottom: 1px solid rgba(255,255,255,0.2);
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -103,13 +104,25 @@ header .wrapper {
   width: 49.999%;
   margin: 0;
   border-style: none;
-  font-size: 2.2em;
+  font-weight: bold;
   text-transform: uppercase;
   color: white;
 }
 
+.member button p {
+  font-size: 22px;
+
+}
+
 .member button:first-child {
   background-color: rgb(33,66,74);
+}
+
+.member button:first-child p {
+  width: fit-content;
+  position: absolute;
+  left: 30%;
+  
 }
 
 .coverButtons {
@@ -160,26 +173,66 @@ h1 {
   font-size: 2.4em;
 }
 
+.domain .wrapper {
+  height: 75%;
+  /*margin: 12.5% auto;*/
+}
+
 .domain h1, .domain p {
   width: fit-content;
 }
 
 .domain table {
-  border: 1px solid rgb(217,217,217);
+  border: 0px solid rgb(217,217,217);
   background-color: rgb(217,217,217);
-  width: 100%;
-  margin: 3rem 0;
+  width: 74%;
+  margin: 3rem auto;
 }
+
+/*.domain tr {
+  display: flex;
+  justify-content: space-around;
+}*/
 
 .domainText td:nth-child(2) {
   color: rgb(134,134,134);
 }
 
+.domain table td:nth-child(2) {
+  width: auto;
+}
+
 .domain table td{
   padding: 1rem 1rem;
   background-color: white;
+  margin:0;
 }
 
+.domainText td:last-child {
+  padding: 0;
+  height: 100%;
+}
+
+.domain select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  -webkit-appearance: none; /*Removes default chrome and safari style*/
+
+  -moz-appearance: none; /* Removes Default Firefox style*/
+
+  text-indent: 0.01px; /* Removes default arrow from firefox*/
+
+  text-overflow: ""; /*Removes default arrow from firefox*/
+
+  background: url(../img/angle-down.png) no-repeat;
+
+  background-position: 97% 10px; /*Position of the background-image*/
+}
+
+.domain select option{
+  list-style-image: url(../img/angle-down.png);
+}
 /*.domain tr:nth-child(even) td {
   border-top: 1px solid rgb(217,217,217);
 }
@@ -187,6 +240,10 @@ h1 {
 .domain table td:last-child{
   border-right: none;
 }*/
+
+.domainPrices td {
+  width: 24%;
+}
 
 .packages {
   height: 765px;
@@ -204,6 +261,7 @@ h1 {
 }
 
 .packages .wrapper {
+  width: 75%;
   display: flex;
   align-items: center;
   border-bottom: 2px dashed rgb(216,216,216);
@@ -257,7 +315,7 @@ h1 {
   border-top-color: rgb(249,212,35);
 }
 
-.packages .basic .level-bar, .packages .basic .right {
+.packages .basic .level-bar, .packages .basic .right, .basic .selectPlan p:last-child:hover {
   color:  rgb(249,212,35);
 }
 
@@ -269,7 +327,7 @@ h1 {
   border-top-color: rgb(127,140,141);
 }
 
-.packages .normal .level-bar, .packages .normal .right {
+.packages .normal .level-bar, .packages .normal .right, .normal .selectPlan p:last-child:hover {
   color: rgb(127,140,141);
 }
 
@@ -281,7 +339,7 @@ h1 {
   border-top-color: rgb(248,95,64);
 }
 
-.packages .big .level-bar , .packages .big .right {
+.packages .big .level-bar , .packages .big .right, .big .selectPlan p:last-child:hover {
   color: rgb(248,95,64);
 }
 
@@ -293,7 +351,7 @@ h1 {
   border-top-color: rgb(26,188,156);
 }
 
-.packages .biggest .level-bar, .packages .biggest .right {
+.packages .biggest .level-bar, .packages .biggest .right, .biggest .selectPlan p:last-child:hover {
   color: rgb(26,188,156);
 }
 
@@ -396,9 +454,47 @@ figcaption {
 }
 
 .comments {
+  color: white;
   height: 190px;
   background-image: url(../img/commentsBG.png);
   background-attachment: fixed;
+}
+
+.comments .wrapper {
+  padding: 3.1%;
+  height: fit-content;
+}
+
+.comments p {
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+}
+
+.comments .aligner p {
+  font-weight: bold;
+}
+
+.comments .wrapper div {
+  width: fit-content;
+  position: relative;
+  display: inline-block;
+}
+
+.comments .wrapper div p {
+  display: inline-block;
+}
+
+.aligner {
+  margin: 0 42%;
+}
+
+.comments i:hover::after {
+  content: "●";
+  position: absolute;
+  left: 0px;
+  top: -1px;
+  font-size: 1.3em;
 }
 
 .functions {
@@ -568,4 +664,12 @@ footer hr {
 
 .area3 p {
   display: inline-block;
+}
+
+footer li:hover, .area3 a:hover {
+  color: white;
+}
+
+.area3 a{
+  text-decoration: none;
 }
