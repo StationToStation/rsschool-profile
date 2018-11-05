@@ -1,6 +1,6 @@
 html {
   font-size: 10px;
-  width: 1600px;
+  width: 100%;
 }
 
 * {
@@ -82,7 +82,7 @@ header .wrapper {
 }
 
 .headerText :first-child {
-  font-size: 4.5rem;
+  font-size: 72px;
 }
 
 .headerText :last-child {
@@ -92,76 +92,88 @@ header .wrapper {
   text-align: center;
 }
 
-
 .member {
-  height: 120px;
-  display: flex;
-  align-items: stretch;
+  width: 100%;
+  overflow: hidden;
+  height: fit-content;
 }
 
-.member button {
-  height: 120px;
-  width: 49.999%;
+.register {
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  box-sizing: border-box;
+}
+
+.register:hover {
+  background: rgb(82,204,143);
+}
+
+.container-fullwidth {
+  width: 100%;
+  height: 100%;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+  text-align: center;
+  height: 100%;
+}
+
+.row::before {
+  display: table;
+  content: " ";
+  box-sizing: border-box;
+}
+
+.col {
+  padding: 0;
   margin: 0;
-  border-style: none;
-  font-weight: bold;
+  width: 50%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.login {
+  background: #21424a;
+  transform: skewX(-20deg);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.login:hover {
+  background: rgb(81,120,148);
+}
+
+.register a, .login a {
+  color: #fff;
+  font-size: 1.375rem;
+  font-family: 'lotobold';
   text-transform: uppercase;
-  color: white;
+  padding: 25px 0px;
+  display: inline-block;
+  transform: skewX(20deg);
 }
 
-.member button p {
-  font-size: 22px;
-
+a {
+  text-decoration: none;
+  outline: none;
 }
 
-.member button:first-child {
-  background-color: rgb(33,66,74);
+.register {
+  background: #2fac6c;
+  transform: skewX(-20deg);
+  text-align: center;
 }
 
-.member button:first-child p {
-  width: fit-content;
-  position: absolute;
-  left: 30%;
-  
+.row::after {
+  clear: both;
 }
 
-.coverButtons {
-  position: absolute;
-  left: 48vw;
-  width: fit-content;
-}
-
-.coverButtons :first-child {
-  background-color: rgb(33,66,74);
-  width: 1.75vw;
-  -webkit-transform: skewX(-15deg); 
-	-moz-transform: skewX(-15deg); 
-	-ms-transform: skewX(-15deg); 
-	-o-transform: skewX(-15deg); 
-  transform: skewX(-15deg);
-  
-}
-
-.coverButtons :last-child {
-  background-color: rgb(47,172,108);
-  width: 1.75vw;
-  -webkit-transform: skewX(-15deg); 
-	-moz-transform: skewX(-15deg); 
-	-ms-transform: skewX(-15deg); 
-	-o-transform: skewX(-15deg); 
-	transform: skewX(-15deg);
-}
-
-.member button:nth-child(2) {
-  background-color: rgb(47,172,108);
-}
-
-/*.member {
-  background-image: url(../img/memberBG.png);
-  height: 120px;
-  background-size: cover;
-  background-position: center;
-}*/
 
 .domain {
   height: 580px;
