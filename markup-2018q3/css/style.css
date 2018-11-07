@@ -1,6 +1,6 @@
 html {
   font-size: 10px;
-  width: 100%;
+  width: 1600px;
 }
 
 * {
@@ -82,13 +82,17 @@ header .wrapper {
 }
 
 .headerText :first-child {
-  font-size: 72px;
+  font-size: 4.5em;
+  font-family: "MyriadPro", 'Lato', sans-serif;
+  font-weight: bold;
+  line-height: 10rem;
 }
 
 .headerText :last-child {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
-  font-size: 2rem;
+  font-size: 2em;
+  line-height: 4rem;
   text-align: center;
 }
 
@@ -182,7 +186,8 @@ a {
 
 h1 {
   color: rgb(56,55,55);
-  font-size: 2.4em;
+  font-size: 2.4rem;
+  line-height: 2.5em;
 }
 
 .domain .wrapper {
@@ -201,11 +206,6 @@ h1 {
   margin: 3rem auto;
 }
 
-/*.domain tr {
-  display: flex;
-  justify-content: space-around;
-}*/
-
 .domainText td:nth-child(2) {
   color: rgb(134,134,134);
 }
@@ -220,6 +220,7 @@ h1 {
   margin:0;
 }
 
+
 .domainText td:last-child {
   padding: 0;
   height: 100%;
@@ -229,7 +230,7 @@ h1 {
   width: 100%;
   height: 100%;
   border: none;
-  -webkit-appearance: none; /*Removes default chrome and safari style*/
+  -webkit-appearance: none; /*Removes default chrome style*/
 
   -moz-appearance: none; /* Removes Default Firefox style*/
 
@@ -239,22 +240,20 @@ h1 {
 
   background: url(../img/angle-down.png) no-repeat;
 
-  background-position: 97% 10px; /*Position of the background-image*/
+  background-position: 97% 10px;
+}
+
+.domain select:focus {
+  outline: none;
 }
 
 .domain select option{
   list-style-image: url(../img/angle-down.png);
 }
-/*.domain tr:nth-child(even) td {
-  border-top: 1px solid rgb(217,217,217);
-}
-
-.domain table td:last-child{
-  border-right: none;
-}*/
 
 .domainPrices td {
-  width: 24%;
+  width: 24%;  
+  padding: 4rem 4rem !important;
 }
 
 .packages {
@@ -279,6 +278,53 @@ h1 {
   border-bottom: 2px dashed rgb(216,216,216);
 }
 
+.packages .level-bar {
+  height: 140px;
+  width: 200px;
+  position: relative;
+}
+
+.packages .level-bar i {
+  position: absolute;
+  top: 54px;
+  left: 100px;
+}
+
+.packages .circle {
+  width: 56px;
+  height: 56px;
+  box-sizing: border-box;
+  border: 6px solid red;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 36px;
+  left:36%;
+}
+
+.level-bar .top {
+  top: 36px;
+}
+
+.level-bar .left {
+  right: 100px;
+}
+
+.level-bar .bottom {
+  top: 64px;
+}
+
+.level-bar .right {
+  right: 72px;
+}
+
+.packages .sector {
+  width: 28px;
+  height: 28px;
+  background-color: white;
+  position: absolute;
+}
+
 .packages .wrapper .wrapper{
   display: block;
   border-top: 1px solid rgb(223,223,223);
@@ -293,9 +339,14 @@ h1 {
   box-shadow: 3px 3px 10px rgba(0,0,0, 0.06);  
 }
 
-.packages article h2 {
+.packages h2 {
+  color: black;
   font-weight: bold;
   text-transform: uppercase;
+  margin: 0 auto;
+  width: fit-content;
+  position: relative;
+  top: 80%;
 }
 
 .left {
@@ -304,6 +355,8 @@ h1 {
 
 .packages .features {  
   font-weight: 300;
+  color: rgb(180,180,180);
+  line-height: 3em;
 }
 
 .right {
@@ -335,6 +388,11 @@ h1 {
   background-color: rgb(249,212,35);
 }
 
+.packages .basic .circle {
+  border-color: rgb(249,212,35);
+}
+
+
 .packages .normal {
   border-top-color: rgb(127,140,141);
 }
@@ -346,6 +404,11 @@ h1 {
 .normal .selectPlan hr {
   background-color: rgb(127,140,141);
 }
+
+.packages .normal .circle {
+  border-color: rgb(127,140,141);
+}
+
 
 .packages .big {
   border-top-color: rgb(248,95,64);
@@ -359,6 +422,11 @@ h1 {
   background-color: rgb(248,95,64);
 }
 
+.packages .big .circle {
+  border-color: rgb(248,95,64);
+}
+
+
 .packages .biggest {
   border-top-color: rgb(26,188,156);
 }
@@ -370,6 +438,11 @@ h1 {
 .biggest .selectPlan hr {
   background-color: rgb(26,188,156);
 }
+
+.packages .biggest .circle {
+  border-color: rgb(26,188,156);
+}
+
 
 .selectPlan {
   margin: 0 auto;
@@ -684,4 +757,10 @@ footer li:hover, .area3 a:hover {
 
 .area3 a{
   text-decoration: none;
+}
+
+@font-face {
+  font-family: "MyriadPro";
+  font-weight: bold;
+  src: url(../fonts/MyriadPro-Bold.otf);
 }
